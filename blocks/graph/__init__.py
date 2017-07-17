@@ -246,7 +246,7 @@ class ComputationGraph(object):
             replacement_vals_cur = outputs_new[len(outputs_cur) +
                                                len(replacement_keys_cur):]
 
-        return ComputationGraph(outputs_cur)
+        return self.__class__(outputs_cur)
 
     def get_theano_function(self, additional_updates=None, **kwargs):
         r"""Create Theano function from the graph contained.
